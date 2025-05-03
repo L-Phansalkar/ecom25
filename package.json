@@ -5,11 +5,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development",
-    "start": "webpack serve --mode development --open",
+    "start": "node server",
     "build": "webpack --mode production",
     "seed": "node script/seed.js",
     "build-client-watch": "webpack -w",
-    "deploy": "webpack -p"
+    "deploy": "script/deploy",
+    "heroku-token": "script/encrypt-heroku-auth-token.js",
   },
   "keywords": [],
   "author": "",
@@ -67,6 +68,7 @@
     "redux": "^5.0.1",
     "redux-logger": "^3.0.6",
     "sequelize": "^6.37.7",
+    "travis": "^0.1.1",
     "wrangler": "^4.14.1"
   }
 }
