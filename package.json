@@ -10,7 +10,7 @@
     "seed": "node script/seed.js",
     "build-client-watch": "webpack -w",
     "deploy": "script/deploy",
-    "heroku-token": "script/encrypt-heroku-auth-token.js",
+    "heroku-token": "script/encrypt-heroku-auth-token.js"
   },
   "keywords": [],
   "author": "",
