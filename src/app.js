@@ -6,7 +6,7 @@ import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import Contact from "./components/Contact";
-import NoPage from "./components/NoPage";
+import NoPage from "./components/noPage";
 
 const App = () => {
   return (
