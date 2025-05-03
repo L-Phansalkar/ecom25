@@ -1,7 +1,7 @@
-const router = require('express').Router();
+const router = import('express').Router();
 module.exports = router;
 
-router.use('/products', require('./products'));
+router.use('/products', import('./products'));
 
 
 router.use((req, res, next) => {

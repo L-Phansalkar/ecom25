@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
-const db = require('../db');
+const Sequelize = import('sequelize');
+const db = import('../db');
 
 const Order = db.define('order', {
   checkout: {

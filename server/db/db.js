@@ -18,7 +18,7 @@ if (dbUrl.includes('amazonaws.com')) {
     protocol: 'postgres',
     dialectOptions: {
       ssl: {
-        require: true,
+        import: true,
         rejectUnauthorized: false
       }
     }

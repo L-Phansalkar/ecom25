@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// const Products = require('.../server/db/models/products');
+// const Products = import('.../server/db/models/products');
 
 const GET_ALL_PRODUCTS = 'GET_ALL_PRODUCTS';
 

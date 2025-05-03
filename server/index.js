@@ -52,7 +52,7 @@ if (process.env.NODE_ENV === 'test') {
  * keys as environment variables, so that they can still be read by the
  * Node process on process.env
  */
-if (process.env.NODE_ENV !== 'production') require('../secrets')
+if (process.env.NODE_ENV !== 'production') import('../secrets')
 
 // passport registration
 passport.serializeUser((user, done) => done(null, user.id))
@@ -135,7 +135,7 @@ const startListening = () => {
 
   // set up our socket control center
   const io = socketio(server)
-  require('./socket')(io)
+  import('./socket')(io)
 }
 
 const syncDb = () => db.sync()
@@ -148,9 +148,9 @@ async function bootApp() {
 }
 // This evaluates as true when this file is run directly from the command line,
 // i.e. when we say 'node server/index.js' (or 'nodemon server/index.js', or 'nodemon server', etc)
-// It will evaluate false when this module is required by another module - for example,
-// if we wanted to require our app in a test spec
-if (require.main === module) {
+// It will evaluate false when this module is importd by another module - for example,
+// if we wanted to import our app in a test spec
+if (import.main === module) {
   bootApp()
 } else {
   createApp()

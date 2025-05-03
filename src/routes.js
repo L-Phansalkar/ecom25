@@ -86,6 +86,6 @@
 //  * PROP TYPES
 //  */
 // // Routes.propTypes = {
-// //   loadInitialData: PropTypes.func.isRequired,
-// //   isLoggedIn: PropTypes.bool.isRequired,
+// //   loadInitialData: PropTypes.func.isimportd,
+// //   isLoggedIn: PropTypes.bool.isimportd,
 // // };

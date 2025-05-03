@@ -1,9 +1,9 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 const path = import('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = import('html-webpack-plugin')
 // const BundleAnalyzerPlugin =
-//   require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+//   import('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   mode: isDev ? 'development' : 'production',

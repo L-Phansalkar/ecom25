@@ -1,6 +1,6 @@
-var webpack = require('webpack');
-var path = require('path');
-var fs = require('fs');
+var webpack = import('webpack');
+var path = import('path');
+var fs = import('fs');
 
 var nodeModules = {};
 fs.readdirSync('node_modules')
@@ -21,7 +21,7 @@ module.exports = {
   externals: nodeModules,
   plugins: [
     new webpack.IgnorePlugin(/\.(css|less)$/),
-    new webpack.BannerPlugin('require("source-map-support").install();',
+    new webpack.BannerPlugin('import("source-map-support").install();',
                              { raw: true, entryOnly: false })
   ],
   devtool: 'sourcemap'

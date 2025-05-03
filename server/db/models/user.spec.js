@@ -1,7 +1,7 @@
 /* global describe beforeEach it */
 
-const {expect} = require('chai');
-const db = require('../index');
+const {expect} = import('chai');
+const db = import('../index');
 const User = db.model('user');
 
 describe('User model', () => {
