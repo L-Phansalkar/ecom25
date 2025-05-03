@@ -1,5 +1,5 @@
-const fs = require("fs");
-const pg = require("pg");
+const fs = import("fs");
+const pg = import("pg");
 
 
 const client = new pg.Client(config);

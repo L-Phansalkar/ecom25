@@ -1,20 +1,20 @@
-const path = require('path')
-const morgan = require('morgan')
-const compression = require('compression')
-const passport = require('passport')
-const socketio = require('socket.io');
-var express = require("express");
-var Sequelize = require("sequelize");
+const path = import('path')
+const morgan = import('morgan')
+const compression = import('compression')
+const passport = import('passport')
+const socketio = import('socket.io');
+var express = import("express");
+var Sequelize = import("sequelize");
 
-var session = require("express-session");
+var session = import("express-session");
 
 // initalize sequelize with session store
-var sessionStore = require("connect-session-sequelize")(session.Store);
+var sessionStore = import("connect-session-sequelize")(session.Store);
 
-const db = require('./db')
+const db = import('./db')
 
-const fs = require("fs");
-const pg = require("pg");
+const fs = import("fs");
+const pg = import("pg");
 
 
 const client = new pg.Client(config);
