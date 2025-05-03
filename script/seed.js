@@ -1,5 +1,5 @@
 'use strict'
-const db = require('../server/db')
+const db = import('../server/db')
 const {User, Product, Order, productOrder} = require('../server/db/models');
 
 async function seed() {

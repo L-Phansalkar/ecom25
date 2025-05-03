@@ -1,12 +1,15 @@
 {
   "name": "ecom25",
   "version": "1.0.0",
+  "engines": {
+    "node": "~23.11.0"
+  },
   "main": "index.js",
   "type": "module" ,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development",
-    "start": "node server/index.js",
+    "start": "node server.js",
     "build": "webpack --mode production",
     "seed": "node script/seed.js",
     "build-client-watch": "webpack -w",
