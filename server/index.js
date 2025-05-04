@@ -9,7 +9,7 @@ var Sequelize = import("sequelize");
 var session = import("express-session");
 
 // initalize sequelize with session store
-var sessionStore = import("connect-session-sequelize")(session.Store);
+var sessionStore = (session.Store);
 
 const db = import('./db')
 
@@ -17,18 +17,18 @@ const fs = import("fs");
 const pg = import("pg");
 
 
-const client = new pg.Client(config);
-client.connect(function (err) {
-  if (err) throw err;
-  client.query("SELECT VERSION()", [], function (err, result) {
-    if (err) throw err;
+// const client = new pg.Client(config);
+// client.connect(function (err) {
+//   if (err) throw err;
+//   client.query("SELECT VERSION()", [], function (err, result) {
+//     if (err) throw err;
 
-    console.log(result.rows[0]);
-    client.end(function (err) {
-      if (err) throw err;
-    });
-  });
-});
+//     console.log(result.rows[0]);
+//     client.end(function (err) {
+//       if (err) throw err;
+//     });
+//   });
+// });
 
 
 const PORT = process.env.PORT || 8080
@@ -150,7 +150,7 @@ async function bootApp() {
 // i.e. when we say 'node server/index.js' (or 'nodemon server/index.js', or 'nodemon server', etc)
 // It will evaluate false when this module is importd by another module - for example,
 // if we wanted to import our app in a test spec
-if (import.main === module) {
+if (import.meta === module) {
   bootApp()
 } else {
   createApp()

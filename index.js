@@ -2,7 +2,7 @@ const fs = import("fs");
 const pg = import("pg");
 
 
-const client = new pg.Client(config);
+const client = new pg.Client();
 client.connect(function (err) {
   if (err) throw err;
   client.query("SELECT VERSION()", [], function (err, result) {
